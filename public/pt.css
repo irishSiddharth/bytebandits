@@ -1,0 +1,163 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #f2f2f2;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffffb6;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.people-tracker-section{
+    background: #7265656d;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px; /* Adjust the width as needed */
+}
+
+
+.section-box{
+    background: #7265656d;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px; /* Adjust the width as needed */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="file"] {
+    margin-bottom: 15px;
+}
+
+.btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ccc; /* Adjust background color as needed */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #dark-mode-toggle.active {
+    background-color: #4CAF50; /* Adjust active background color as needed */
+  }
+  
+  /* Optional: Add a subtle shadow to the button */
+  #dark-mode-toggle {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  #dark-mode-toggle:hover {
+    transform: scale(1.1); /* Hover animation: scale up slightly */
+  }

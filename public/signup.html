@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Clue Management Website</title>
+    <link rel="stylesheet" href="lslight.css">
+    <link rel="stylesheet" href="ls.css">
+    <script>
+        // Function to validate password strength
+        function validatePasswordStrength() {
+            var password = document.getElementById('password').value;
+
+            // Regular expression for password strength
+            var strongRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+            return strongRegex.test(password);
+        }
+
+        // Function to validate password and confirm password fields
+        function validateForm() {
+            var confirmPassword = document.getElementById('Confirm_password').value;
+            if (!validatePasswordStrength()) {
+                alert("Password must contain at least 8 characters, including uppercase, lowercase, numbers, and special characters.");
+                return false; // Prevent form submission
+            }
+            var password = document.getElementById('password').value;
+            if (password !== confirmPassword) {
+                alert("Password and confirm password do not match");
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="http://localhost:3000/">Home</a></li>
+                <li><a href="http://localhost:3000/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login-register-section">
+            <h2>Register</h2>
+            <form action="/register" method="POST" onsubmit="return validateForm()">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="Confirm password">Confirm Password:</label>
+                <input type="password" id="Confirm_password" name="Confirm_password" required>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+       <p>&copy; Byte bandits ; All rights reserved.</p>
+    </footer>
+
+    <script src="ls.js"></script>
+</body>
+</html>

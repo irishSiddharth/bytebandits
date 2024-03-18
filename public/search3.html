@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search - Clue Management Website</title>
+  <link rel="stylesheet" href="ptlight.css">
+  <link rel="stylesheet" href="pt.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section-box">
+      <h2>Search</h2>
+      <div class="search-form">
+        <form action="/search" method="GET">
+          <label for="clue-search">Search Clues by date:</label>
+          <input type="date" id="clue-search" name="clue_search" placeholder="Enter date">
+          <button type="submit" class="btn">Search</button>
+        </form>
+      </div>
+      <div id="search-results"></div> </section>
+  </main>
+
+  <footer>
+    <p>&copy; Byte bandits ; All rights reserved.</p>
+  </footer>
+  <script src="ls.js"></script>
+</body>
+</html>
